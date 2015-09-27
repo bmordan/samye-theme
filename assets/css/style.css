@@ -1,0 +1,58 @@
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.button {
+  margin: 12px auto;
+  color: rgb(160,112,160);
+  border-color: rgb(160,112,160);
+}
+#header {
+  background-color: rgb(255,132,60);
+  background-image: url('/assets/img/back.png');
+  background-repeat: repeat-x;
+  height: 120px;
+}
+#header h1{
+  line-height: 120px;
+  width: 45%;
+  float: left;
+  background-image: url('/assets/img/ksdl-logo.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#header h2{
+  line-height: 120px;
+  width: 45%;
+  float:right;
+  background-image: url('/assets/img/right.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 120px;
+  width: 100%;
+  background-image: url('/assets/img/footer-bg.jpg');
+  background-repeat: repeat-x;
+  color: white;
+  text-align: right;
+}
+#footer a, #footer a:hover, #footer a:active { color: white; }
+#footer .image {
+  float: left;
+}
+#footer .contact {
+  padding: 12px;
+  font-size: 89%;
+  background-image: url('/assets/img/footer-right.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto 100%;
+}

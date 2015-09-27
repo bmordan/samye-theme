@@ -1,0 +1,25 @@
+{{!< default}}
+{{> header}}
+<main id="content-wrapper" role="main" class="container">
+  <div class="row">
+    <a href="/" class="one column button">back</a>
+  </div>
+  {{#post}}
+    <article class="{{post_class}} row" role="article" itemscope itemtype="http://schema.org/Article">
+      <header class="post-header">
+        <h1 class="post-title" itemprop="headline">{{{title}}}</h1>
+      </header>
+      <div class="post-content" itemprop="articleBody">
+        {{content}}
+      </div>
+    </article>
+  {{/post}}    
+
+  {{#if pagination}}
+      {{> pagination}}
+  {{/if}}
+  <div class="row">
+    <a href="/" class="one column button">back</a>
+  </div>
+</main>
+{{> footer}}
