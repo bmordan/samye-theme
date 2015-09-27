@@ -4,32 +4,28 @@ img {
 a {
   text-decoration: none;
 }
+small {
+  font-size: 50%;
+}
 .button {
   margin: 12px auto;
   color: rgb(160,112,160);
   border-color: rgb(160,112,160);
 }
 #header {
-  background-color: rgb(255,132,60);
-  background-image: url('/assets/img/back.png');
-  background-repeat: repeat-x;
-  height: 120px;
+  height: auto;
 }
 #header h1{
-  line-height: 120px;
-  width: 45%;
-  float: left;
+  width: 100%;
+  height: 85px;
+  display: block;
   background-image: url('/assets/img/ksdl-logo.png');
   background-repeat: no-repeat;
   background-position: left top;
+  background-size: 100% auto;
 }
 #header h2{
-  line-height: 120px;
-  width: 45%;
-  float:right;
-  background-image: url('/assets/img/right.png');
-  background-repeat: no-repeat;
-  background-position: right top;
+  display: none;
 }
 #footer{
   position: absolute;
@@ -46,7 +42,7 @@ a {
 }
 #footer a, #footer a:hover, #footer a:active { color: white; }
 #footer .image {
-  float: left;
+  display: none;
 }
 #footer .contact {
   padding: 12px;
@@ -55,4 +51,60 @@ a {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: auto 100%;
+}
+/* Larger than mobile */
+@media (min-width: 400px) {
+  #header {
+    background-color: rgb(255,132,60);
+    background-image: url('/assets/img/back.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    height: 85px;    
+  }
+  #header h1{
+    height: 85px;
+    background-size: auto 100%;
+  }
+}
+/* Larger than phablet */
+@media (min-width: 550px) {
+  #header {
+    background-color: rgb(255,132,60);
+    background-image: url('/assets/img/back.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    height: 120px;    
+  }
+  #header h1{
+    height: 120px;
+  }
+  small {
+    font-size: 75%;
+  }
+}
+/* Larger than tablet */
+@media (min-width: 750px) {}
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  #header h1{
+    width: 45%;
+    float: left;
+  }
+  #header h2{
+    display: inline-block;
+    width: 45%;
+    float: right;
+    line-height: 120px;
+    width: 45%;
+    float:right;
+    background-image: url('/assets/img/right.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  #footer .image {
+    display: inline-block;
+    float: left;
+  }
 }
