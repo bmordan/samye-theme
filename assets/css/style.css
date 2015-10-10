@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 img {
   max-width: 100%;
 }
@@ -29,11 +32,6 @@ small {
 #header h2{
   display: none;
 }
-#header #hamburger {
-  position: absolute;
-  top: 36px;
-  right: 5px;
-}
 #navigation {
   z-index: 2;
   width: 136px;
@@ -41,7 +39,7 @@ small {
   height: 390px;
   text-align: right;
   position: absolute;
-  top: 95px;
+  top: 0;
   right: 0;
   padding: 3px;
   transition: right 0.8s;
@@ -49,6 +47,19 @@ small {
 #navigation.nav-hide {
   right: -150px;
   transition: right 0.4s;
+}
+#hamburger {
+  position: fixed;
+  width: 37px;
+  height: 12px;
+  top: 100px;
+  right: 150px;
+  color: rgb(0,160,60);
+  text-align: center;
+}
+#hamburger.relative {
+  position: absolute;
+  top: -24px;
 }
 #navigation .link {
   list-style-type: none;
