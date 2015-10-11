@@ -1,4 +1,4 @@
-body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -70,12 +70,14 @@ small {
   border: dotted 2px rgb(0,160,60);
   border-bottom: none;
 }
+#navigation li:last-child {
+  border-bottom: dotted 2px rgb(0,160,60);
+}
 #navigation .link a {
   color: rgb(0,160,60);
   font-weight: 800;
   padding: 6px;
 }
-main.content-wrapper {}
 #footer{
   position: relative;
   bottom: 0;
@@ -101,7 +103,12 @@ main.content-wrapper {}
   background-position: right top;
   background-size: auto 100%;
 }
-/* Larger than mobile */
+
+
+/* Larger than mobile *//* Larger than mobile *//* Larger than mobile */
+
+
+
 @media (min-width: 400px) {
   #header {
     background-color: rgb(255,132,60);
@@ -114,8 +121,16 @@ main.content-wrapper {}
     height: 85px;
     background-size: auto 100%;
   }
+  #content-wrapper {
+    margin: 55px auto;
+  }
+  #footer{
+    position: relative;
+  }
 }
-/* Larger than phablet */
+
+/* Larger than phablet *//* Larger than phablet *//* Larger than phablet */
+
 @media (min-width: 550px) {
   #header {
     background-color: rgb(255,132,60);
@@ -146,12 +161,11 @@ main.content-wrapper {}
     background-color: white; 
     margin: 0;
     padding: 0;
-    position: relative;
-    top: 119px;
     text-align: left;
   }
   #navigation.nav-hide {
-    top: -3px;
+    position: absolute;
+    top: 120px;
     right: 0;
   }
   #navigation ul {
@@ -160,7 +174,7 @@ main.content-wrapper {}
     height: 100%;
     border-bottom: dotted 2px rgb(0, 160, 60);
   }
-  #navigation li.secondary {
+  #navigation li.secondary,  #navigation li.thirdinary {
     display: none;
   }
   #navigation .link {
@@ -172,7 +186,9 @@ main.content-wrapper {}
     display: inline-block;
     background-color: white;
   }
-
+  #footer{
+    position: absolute;
+  }
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {}
@@ -196,5 +212,25 @@ main.content-wrapper {}
   #footer .image {
     display: inline-block;
     float: left;
+  }
+  #navigation.nav-hide {
+    position: absolute;
+    top: 119px;
+  }
+  #navigation li.secondary {
+    display: inline-block;
+  }
+  #navigation .link {
+    width: 10%;
+    padding-right: 6px;
+  }
+}
+@media (min-width: 1400px) {
+  #navigation li.thirdinary {
+    display: inline-block;
+  }
+  #navigation .link {
+    width: 7%;
+    padding-right: 0;
   }
 }
